@@ -1,0 +1,89 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 77px;
+}
+body{
+    font-family: var(--FuenteTexto);
+}
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background: linear-gradient(white,rgb(201, 11, 182),rgb(102, 3, 3));
+}
+
+#contenedorEfectos {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+#imagen{
+    width: 20em;
+    height: 20em;
+    background-size: cover;
+    background-position: center;
+    border: 0.3em rgb(70, 5, 5) groove;
+}
+#imagen img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nutria{
+    position: absolute;
+    bottom: 0;
+}
+
+.nutria {
+    width: 200px;
+    animation: saltar 2s ease-out forwards;
+}
+
+.corazon {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: flotar 2s ease-in-out forwards;
+}
+
+@keyframes saltar 
+{
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-200px) rotate(10deg); }
+    100% { transform: translateY(-250px) rotate(-10deg); opacity: 0; }
+}
+@keyframes flotar {
+    0% { transform: translateY(0) scale(0.5); opacity: 1; }
+    100% { transform: translateY(-300px) scale(1); opacity: 0; }
+}
+
+@media screen and (max-width: 600px) {
+    #imagen {
+        width: 12em;
+        height: 12em;
+    }
+
+    .nutria {
+        width: 100px;
+    }
+
+    .corazon {
+        width: 50px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 0.4em 0.8em;
+    }
+}
