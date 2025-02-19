@@ -106,6 +106,7 @@ button{
     color: #F05757;
     outline: none;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding: 0.5em;
 }
 
 @keyframes flotar {
